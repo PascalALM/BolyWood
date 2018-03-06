@@ -10,10 +10,10 @@ namespace Composants
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-        public List<LigneCommande> pieces { get; set; }
-        public DateTime Date_creation { get; set; }
-        public DateTime Date_edition { get; set; }
-        public DateTime Date_prevision { get; set; }
+        public virtual List<LigneCommande> LigneCommandes { get; set; }
+        public DateTime DateCreation { get; set; }
+        public DateTime DateEdition { get; set; }
+        public DateTime DatePrevision { get; set; }
         
 
     }
