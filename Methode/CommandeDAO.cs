@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Methode
 {
-    class BonCommandeDAO
+    class CommandeDAO
     { 
 
-        public string getBonCommande(int id)
+        public string getCommande(int id)
         {
             //this.msg = new msg;
             //this.msg.data = new object[1];
             //this.msg.data[0] = (object)"SELECT id FROM PERSONNE WHERE login = '"+ login + "' AND psd = '"+ pwd + "';";
-            return "SELECT * FROM BON_COMMANDE WHERE id = " + id + ";";
+            return "SELECT * FROM COMMANDE WHERE id = " + id + ";";
             
         }
-        public string getBonCommandes()
+        public string getCommandes()
         {
             //this.msg = new msg;
             //this.msg.data = new object[1];
