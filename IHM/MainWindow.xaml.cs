@@ -25,6 +25,7 @@ namespace IHM
             InitializeComponent();
 
             DataContext = new BindingDataGrid();
+            ComboBoxColumn.ItemsSource = new BindingDataGrid().Unites;
         }
 
         private void btnAddRow_Click(object sender, RoutedEventArgs e)

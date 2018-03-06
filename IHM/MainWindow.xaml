@@ -41,8 +41,18 @@
             x:Name="gridContentRow">
 
             <DataGrid
-                ItemsSource="{Binding LigneCommandes}">
+                ItemsSource="{Binding LigneCommandes}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Piece" Width="*" Binding="{Binding Piece}"/>
+                    <DataGridTextColumn Header="Quantite" Width="*" Binding="{Binding Quantite}"/>
+                    <DataGridComboBoxColumn x:Name="ComboBoxColumn" Header="Unite" Width="*"
+                                            SelectedItemBinding="{Binding Unites}">
+                        
+                        
+                    </DataGridComboBoxColumn>
+                </DataGrid.Columns>
                 
+
             </DataGrid>
 
 
@@ -67,7 +77,7 @@
                 x:Name="btnAddRow" Click="btnAddRow_Click">
                 <Viewbox>
                     <TextBlock>
-                        Ajouter une ligne
+                        Visualiser les bon de commande
                     </TextBlock>
                 </Viewbox>
             </Button>
