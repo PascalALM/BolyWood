@@ -12,9 +12,26 @@ namespace Methode
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class Transfert : Contrat.IDataContract
     {
-        public STC_MSG getData(STC_MSG msg)
+
+        private STC_MSG msg;
+        public STC_MSG getData(STC_MSG message)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Transfert.getData() Succès");
+            //if (message.OpName == "sendBC")
+            //{
+            //    message = new Controller().getResult(message);
+            //}
+
+            msg = new STC_MSG();
+            msg.AppName = "BolyWood Motherfucker";
+            msg.AppVrs = "1000.0";
+            msg.OpName = "sendBC";
+            msg.OpStatut = false;
+
+            msg.MsgInfo = "";
+            
+
+            return message;
         }
     }
 }
