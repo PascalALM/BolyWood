@@ -1,0 +1,7 @@
+C:\Users\Pascal\source\repos\BolyWood\Composants\bin\Debug\Composants.dll.config
+C:\Users\Pascal\source\repos\BolyWood\Composants\bin\Debug\Composants.dll
+C:\Users\Pascal\source\repos\BolyWood\Composants\bin\Debug\Composants.pdb
+C:\Users\Pascal\source\repos\BolyWood\Composants\obj\Debug\Composants.csprojResolveAssemblyReference.cache
+C:\Users\Pascal\source\repos\BolyWood\Composants\obj\Debug\Composants.csproj.CoreCompileInputs.cache
+C:\Users\Pascal\source\repos\BolyWood\Composants\obj\Debug\Composants.dll
+C:\Users\Pascal\source\repos\BolyWood\Composants\obj\Debug\Composants.pdb

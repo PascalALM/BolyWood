@@ -1,0 +1,10 @@
+C:\Users\Pascal\source\repos\BolyWood\Contrat\bin\Debug\ContratWCF.dll.config
+C:\Users\Pascal\source\repos\BolyWood\Contrat\bin\Debug\ContratWCF.dll
+C:\Users\Pascal\source\repos\BolyWood\Contrat\bin\Debug\ContratWCF.pdb
+C:\Users\Pascal\source\repos\BolyWood\Contrat\bin\Debug\Composants.dll
+C:\Users\Pascal\source\repos\BolyWood\Contrat\bin\Debug\Composants.pdb
+C:\Users\Pascal\source\repos\BolyWood\Contrat\bin\Debug\Composants.dll.config
+C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\Contrat.csprojResolveAssemblyReference.cache
+C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\Contrat.csproj.CoreCompileInputs.cache
+C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\ContratWCF.dll
+C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\ContratWCF.pdb

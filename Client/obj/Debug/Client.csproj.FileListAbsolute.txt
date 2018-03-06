@@ -1,0 +1,6 @@
+C:\Users\Pascal\source\repos\BolyWood\Client\bin\BolyWood.dll
+C:\Users\Pascal\source\repos\BolyWood\Client\bin\BolyWood.pdb
+C:\Users\Pascal\source\repos\BolyWood\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Pascal\source\repos\BolyWood\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Pascal\source\repos\BolyWood\Client\obj\Debug\BolyWood.dll
+C:\Users\Pascal\source\repos\BolyWood\Client\obj\Debug\BolyWood.pdb
