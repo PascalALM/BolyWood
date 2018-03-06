@@ -9,10 +9,8 @@ namespace Composants
     public class Piece
     {
         public int Id { get; set; }
-        public int Ref_piece { get; set; }
         public string Nom { get; set; }
-        public int Quantite { get; set; }
-        public List<string> Unite { get; set; }
+        public float PrixUnitaire { get; set; }
 
 
     }

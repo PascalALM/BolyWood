@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Composants
 {
-    public class BonCommande
+    public class Commande
     {
         public int Id { get; set; }
         public string Nom { get; set; }
         public List<Piece> pieces { get; set; }
-        public DateTime Date_crea { get; set; }
+        public DateTime Date_creation { get; set; }
+        public DateTime Date_edition { get; set; }
+        public DateTime Date_prevision { get; set; }
         public DateTime Date_prev { get; set; }
         
 
