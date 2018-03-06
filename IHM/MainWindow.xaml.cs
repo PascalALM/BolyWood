@@ -23,6 +23,8 @@ namespace IHM
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new BindingDataGrid();
         }
 
         private void btnAddRow_Click(object sender, RoutedEventArgs e)

@@ -11,3 +11,16 @@ C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.csprojResolveAss
 C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.csproj.CoreCompileInputs.cache
 C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.dll
 C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.pdb
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\Methode.dll.config
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\Methode.dll
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\Methode.pdb
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\Composants.dll
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\ContratWCF.dll
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\Composants.pdb
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\Composants.dll.config
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\ContratWCF.pdb
+C:\Users\black\Source\Repos\BolyWood2\Methode\bin\Debug\ContratWCF.dll.config
+C:\Users\black\Source\Repos\BolyWood2\Methode\obj\Debug\Methode.csprojResolveAssemblyReference.cache
+C:\Users\black\Source\Repos\BolyWood2\Methode\obj\Debug\Methode.csproj.CoreCompileInputs.cache
+C:\Users\black\Source\Repos\BolyWood2\Methode\obj\Debug\Methode.dll
+C:\Users\black\Source\Repos\BolyWood2\Methode\obj\Debug\Methode.pdb

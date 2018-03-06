@@ -41,7 +41,7 @@
             x:Name="gridContentRow">
 
             <DataGrid
-                ItemsSource="{Binding }">
+                ItemsSource="{Binding LigneCommandes}">
                 
             </DataGrid>
 

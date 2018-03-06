@@ -8,3 +8,13 @@ C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\Contrat.csprojResolveAss
 C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\Contrat.csproj.CoreCompileInputs.cache
 C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\ContratWCF.dll
 C:\Users\Pascal\source\repos\BolyWood\Contrat\obj\Debug\ContratWCF.pdb
+C:\Users\black\Source\Repos\BolyWood2\Contrat\bin\Debug\ContratWCF.dll.config
+C:\Users\black\Source\Repos\BolyWood2\Contrat\bin\Debug\ContratWCF.dll
+C:\Users\black\Source\Repos\BolyWood2\Contrat\bin\Debug\ContratWCF.pdb
+C:\Users\black\Source\Repos\BolyWood2\Contrat\bin\Debug\Composants.dll
+C:\Users\black\Source\Repos\BolyWood2\Contrat\bin\Debug\Composants.pdb
+C:\Users\black\Source\Repos\BolyWood2\Contrat\bin\Debug\Composants.dll.config
+C:\Users\black\Source\Repos\BolyWood2\Contrat\obj\Debug\Contrat.csprojResolveAssemblyReference.cache
+C:\Users\black\Source\Repos\BolyWood2\Contrat\obj\Debug\Contrat.csproj.CoreCompileInputs.cache
+C:\Users\black\Source\Repos\BolyWood2\Contrat\obj\Debug\ContratWCF.dll
+C:\Users\black\Source\Repos\BolyWood2\Contrat\obj\Debug\ContratWCF.pdb
