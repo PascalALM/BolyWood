@@ -45,14 +45,29 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandeContext.cs" />
     <Compile Include="CommandeDAO.cs" />
     <Compile Include="CAD.cs" />
+    <Compile Include="Migrations\201803061441126_init.cs" />
+    <Compile Include="Migrations\201803061441126_init.Designer.cs">
+      <DependentUpon>201803061441126_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061537067_structure de piece.cs" />
+    <Compile Include="Migrations\201803061537067_structure de piece.Designer.cs">
+      <DependentUpon>201803061537067_structure de piece.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061540592_commande columns nullable.cs" />
+    <Compile Include="Migrations\201803061540592_commande columns nullable.Designer.cs">
+      <DependentUpon>201803061540592_commande columns nullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transfert.cs" />
   </ItemGroup>
@@ -69,6 +84,17 @@
       <Project>{53e741be-81a6-4cd7-851b-bce84ceb23f7}</Project>
       <Name>Contrat</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803061441126_init.resx">
+      <DependentUpon>201803061441126_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061537067_structure de piece.resx">
+      <DependentUpon>201803061537067_structure de piece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061540592_commande columns nullable.resx">
+      <DependentUpon>201803061540592_commande columns nullable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

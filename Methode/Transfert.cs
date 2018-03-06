@@ -13,25 +13,34 @@ namespace Methode
     public class Transfert : Contrat.IDataContract
     {
 
-        private STC_MSG msg;
+        private STC_MSG reponse;
         public STC_MSG getData(STC_MSG message)
         {
+            EndpointAddress ep;
+            Contrat.IDataContract proxy;
+            string uri;
+
             Console.WriteLine("Transfert.getData() Succès");
             //if (message.OpName == "sendBC")
             //{
             //    message = new Controller().getResult(message);
             //}
 
-            msg = new STC_MSG();
-            msg.AppName = "BolyWood Motherfucker";
-            msg.AppVrs = "1000.0";
-            msg.OpName = "sendBC";
-            msg.OpStatut = false;
 
-            msg.MsgInfo = "";
-            
 
-            return message;
+            uri = "http://localhost:8010/Commande/Prevision";
+            ep = new EndpointAddress(uri);
+
+            proxy = ChannelFactory<Contrat.IDataContract>.CreateChannel(new BasicHttpBinding(), ep);
+
+            //proxy.getData(message);
+
+            reponse = proxy.getData(message);
+
+            Console.WriteLine(reponse);
+
+
+            return reponse;
         }
     }
 }

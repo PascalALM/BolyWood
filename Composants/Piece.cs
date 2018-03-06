@@ -10,7 +10,7 @@ namespace Composants
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-        public float PrixUnitaire { get; set; }
+        public double PrixUnitaire { get; set; }
 
 
     }
