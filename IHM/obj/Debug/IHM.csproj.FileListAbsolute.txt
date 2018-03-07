@@ -46,3 +46,7 @@ C:\Users\black\Source\Repos\BolyWood2\IHM\obj\Debug\IHM.csproj.GenerateResource.
 C:\Users\black\Source\Repos\BolyWood2\IHM\obj\Debug\IHM.csproj.CoreCompileInputs.cache
 C:\Users\black\Source\Repos\BolyWood2\IHM\obj\Debug\IHM.exe
 C:\Users\black\Source\Repos\BolyWood2\IHM\obj\Debug\IHM.pdb
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.dll
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.xml
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.SqlServer.xml
