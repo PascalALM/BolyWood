@@ -23,11 +23,21 @@ namespace IHM
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new BindingDataGrid();
+            ComboBoxColumn.ItemsSource = new BindingDataGrid().Unites;
         }
 
         private void btnAddRow_Click(object sender, RoutedEventArgs e)
         {
            
+        }
+
+        
+
+        private void btnValider_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(BonDeCommande.ToString());
         }
     }
 }
