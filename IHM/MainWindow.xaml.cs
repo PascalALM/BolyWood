@@ -27,17 +27,23 @@ namespace IHM
             DataContext = new BindingDataGrid();
             ComboBoxColumn.ItemsSource = new BindingDataGrid().Unites;
         }
-
-        private void btnAddRow_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
         
 
         private void btnValider_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(BonDeCommande.ToString());
+            if(this.tbNom.Text == "")
+            {
+                MessageBox.Show("Veuillez données un nom a votre bon de commande", "Erreur");
+            }
+            else
+            {
+                //Do jobs
+            }
+        }
+
+        private void btnNewCommande_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

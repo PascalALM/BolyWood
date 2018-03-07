@@ -61,12 +61,40 @@
             Grid.Row="3"
             x:Name="gridContentRow">
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Viewbox>
+                    <TextBlock>
+                        Nom : 
+                    </TextBlock>
+                </Viewbox>
+
+                <TextBox 
+                    Grid.Column="2"
+                    x:Name="tbNom">
+                    
+                </TextBox>
+                
+            </Grid>
+
             <DataGrid
                 ItemsSource="{Binding LigneCommandes}" 
                 AutoGenerateColumns="False"
                 x:Name="BonDeCommande"
                 IsReadOnly="False"
-                CanUserAddRows="True">
+                CanUserAddRows="True"
+                Grid.Row="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Piece" Width="*"/>
                     <DataGridTextColumn Header="Quantite" Width="*" Binding="{Binding Quantite}"/>
@@ -99,10 +127,10 @@
 
             <Button
                 Grid.Column="0"
-                x:Name="btnAddRow" Click="btnAddRow_Click">
+                x:Name="btnNewCommande" Click="btnNewCommande_Click" >
                 <Viewbox>
                     <TextBlock>
-                        Visualiser les bon de commande
+                        Nouveau bon de commande
                     </TextBlock>
                 </Viewbox>
             </Button>

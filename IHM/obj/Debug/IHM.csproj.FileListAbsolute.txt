@@ -53,3 +53,13 @@ C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Composants.pdb
 C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Composants.dll.config
 C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\EntityFramework.xml
 C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.dll
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.xml
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\Methode.dll
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\ContratWCF.dll
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\Methode.pdb
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\Methode.dll.config
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\ContratWCF.pdb
+C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\ContratWCF.dll.config
