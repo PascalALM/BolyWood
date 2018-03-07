@@ -107,6 +107,10 @@
       <Project>{1f6e04ff-2649-47f3-b352-f90d2cef9b9e}</Project>
       <Name>Composants</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Methode\Methode.csproj">
+      <Project>{53dde1e8-e0b4-49b9-b576-4ddda8b694d6}</Project>
+      <Name>Methode</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

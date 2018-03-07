@@ -1,4 +1,5 @@
 ﻿using Composants;
+using Methode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace IHM
 
 
 
+
         public BindingDataGrid()
         {
 
@@ -25,7 +27,7 @@ namespace IHM
             List<string> _unites = new List<string> { "Piece", "Lot", "Gramme", "KiloGramme" };
 
             var _customers = new List<LigneCommande>();
-            var _bondecommande = new List<Commande>();
+            var _bondecommande = CommandeDAO.getCommandes();
 
             LigneCommandes = CollectionViewSource.GetDefaultView(_customers);
             Unites = CollectionViewSource.GetDefaultView(_unites);
