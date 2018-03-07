@@ -25,18 +25,6 @@ namespace Client
             //Console.WriteLine(reponse);
             Console.WriteLine("Test d'ajout en base de donnée");
 
-            Piece piece1 = new Piece()
-            {
-                Nom = "Barre",
-                PrixUnitaire = 20.0
-            };
-            Piece piece2 = new Piece()
-            {
-                Nom = "Vis",
-                PrixUnitaire = 1.0
-            };
-            Commande commande = new Commande("Date");
-
             using (var db = new CommandeContext())
             {
                 //db.Pieces.Add(piece1);
@@ -44,14 +32,20 @@ namespace Client
                 //db.Commandes.Add(commande);
                 //db.SaveChanges();
 
-                List<Commande> commandes = db.Commandes.ToList();
+                List<Commande> commandes = CommandeDAO.getCommandes();
                 //var commandes = from b in db.Commandes
                 //            //where b.Name.StartsWith("B")
                 //            select b;
+                Console.WriteLine("getAll");
                 foreach (Commande c in commandes)
                 {
                     Console.WriteLine(c);
                 }
+
+
+                Console.WriteLine("get commande2");
+                Commande commande2 = CommandeDAO.getCommande(4);
+                Console.WriteLine(commande2);
                 //var query = (from r in db.Commandes select r);
                 // Display all Blogs from the database 
                 //var query = from b in db.Pieces
