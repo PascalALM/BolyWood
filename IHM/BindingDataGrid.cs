@@ -13,18 +13,23 @@ namespace IHM
 
          public ICollectionView LigneCommandes { get; private set; }
          public ICollectionView Unites { get; private set; }
+         public ICollectionView Commandes { get; private set; }
+
+
 
 
         public BindingDataGrid()
         {
 
-
+            
             List<string> _unites = new List<string> { "Piece", "Lot", "Gramme", "KiloGramme" };
 
             var _customers = new List<LigneCommande>();
+            var _bondecommande = new List<Commande>();
 
             LigneCommandes = CollectionViewSource.GetDefaultView(_customers);
             Unites = CollectionViewSource.GetDefaultView(_unites);
+            Commandes = CollectionViewSource.GetDefaultView(_bondecommande);
 
 
 

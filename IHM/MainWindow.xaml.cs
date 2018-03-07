@@ -32,5 +32,12 @@ namespace IHM
         {
            
         }
+
+        
+
+        private void btnValider_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(BonDeCommande.ToString());
+        }
     }
 }

@@ -11,6 +11,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -24,6 +26,25 @@
         </Grid.RowDefinitions>
 
         <Grid
+            Grid.Row="2"
+            Grid.Column="3" Grid.RowSpan="2">
+
+            <DataGrid ItemsSource="{Binding Commandes}" 
+                      Margin="0,6,0,0"
+                      AutoGenerateColumns="False">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
+                    <DataGridTextColumn Header="Date de création" Binding="{Binding DateCreation}" Width="*"/>
+                    <DataGridTextColumn Header="Dernière édition" Binding="{Binding DateEdition}" Width="*"/>
+                    <DataGridTextColumn Header="Dernière Prévision" Binding="{Binding DatePrevision}" Width="*"/>
+                </DataGrid.Columns>
+                
+                
+            </DataGrid>
+        </Grid>
+
+            <Grid
             Grid.Column="1"
             Grid.Row="1">
 
@@ -41,9 +62,13 @@
             x:Name="gridContentRow">
 
             <DataGrid
-                ItemsSource="{Binding LigneCommandes}" AutoGenerateColumns="False">
+                ItemsSource="{Binding LigneCommandes}" 
+                AutoGenerateColumns="False"
+                x:Name="BonDeCommande"
+                IsReadOnly="False"
+                CanUserAddRows="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Piece" Width="*" Binding="{Binding Piece}"/>
+                    <DataGridTextColumn Header="Piece" Width="*"/>
                     <DataGridTextColumn Header="Quantite" Width="*" Binding="{Binding Quantite}"/>
                     <DataGridComboBoxColumn x:Name="ComboBoxColumn" Header="Unite" Width="*"
                                             SelectedItemBinding="{Binding Unites}">
@@ -84,7 +109,8 @@
 
 
             <Button
-                Grid.Column="2">
+                Grid.Column="2" 
+                x:Name="btnValider" Click="btnValider_Click">
                 <Viewbox>
                     <TextBlock>
                         Valider
