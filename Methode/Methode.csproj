@@ -66,17 +66,9 @@
     <Compile Include="CommandeContext.cs" />
     <Compile Include="CommandeDAO.cs" />
     <Compile Include="CAD.cs" />
-    <Compile Include="Migrations\201803061441126_init.cs" />
-    <Compile Include="Migrations\201803061441126_init.Designer.cs">
-      <DependentUpon>201803061441126_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803061537067_structure de piece.cs" />
-    <Compile Include="Migrations\201803061537067_structure de piece.Designer.cs">
-      <DependentUpon>201803061537067_structure de piece.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803061540592_commande columns nullable.cs" />
-    <Compile Include="Migrations\201803061540592_commande columns nullable.Designer.cs">
-      <DependentUpon>201803061540592_commande columns nullable.cs</DependentUpon>
+    <Compile Include="Migrations\201803071001511_init.cs" />
+    <Compile Include="Migrations\201803071001511_init.Designer.cs">
+      <DependentUpon>201803071001511_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,14 +89,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803061441126_init.resx">
-      <DependentUpon>201803061441126_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803061537067_structure de piece.resx">
-      <DependentUpon>201803061537067_structure de piece.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803061540592_commande columns nullable.resx">
-      <DependentUpon>201803061540592_commande columns nullable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803071001511_init.resx">
+      <DependentUpon>201803071001511_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

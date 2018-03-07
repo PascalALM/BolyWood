@@ -7,13 +7,13 @@ namespace Methode.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class structuredepiece : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(structuredepiece));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803061537067_structure de piece"; }
+            get { return "201803071001511_init"; }
         }
         
         string IMigrationMetadata.Source

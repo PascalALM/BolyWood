@@ -25,47 +25,61 @@ namespace Client
             //Console.WriteLine(reponse);
             Console.WriteLine("Test d'ajout en base de donnée");
 
+
+            //Piece piece1 = new Piece()
+            //{
+            //    Nom = "Planche",
+            //    PrixUnitaire = 50.0
+            //};
+            //Piece piece2 = new Piece()
+            //{
+            //    Nom = "Ampoule",
+            //    PrixUnitaire = 12.0
+            //};
+            //Commande commande = new Commande("Deuxième commande");
+
             using (var db = new CommandeContext())
             {
-                //db.Pieces.Add(piece1);
-                //db.Pieces.Add(piece2);
-                //db.Commandes.Add(commande);
-                //db.SaveChanges();
 
-                List<Commande> commandes = CommandeDAO.getCommandes();
-                //var commandes = from b in db.Commandes
-                //            //where b.Name.StartsWith("B")
-                //            select b;
-                Console.WriteLine("getAll");
-                foreach (Commande c in commandes)
-                {
-                    Console.WriteLine(c);
-                }
+                //CommandeDAO.insertObject(ref piece1);
+                //CommandeDAO.insertObject(ref piece2);
+                //piece1 = CommandeDAO.insertObject(piece1);
+                //piece2 = CommandeDAO.insertObject(piece2);
+                //commande = CommandeDAO.insertObject(commande);
+
+                List<Piece> pieces = CommandeDAO.getPieces();
+
 
 
                 Console.WriteLine("get commande2");
-                Commande commande2 = CommandeDAO.getCommande(4);
+                Commande commande2 = CommandeDAO.getCommande(2);
                 Console.WriteLine(commande2);
-                //var query = (from r in db.Commandes select r);
-                // Display all Blogs from the database 
-                //var query = from b in db.Pieces
-                //            orderby b.Nom
-                //            select b;
 
-                //Console.WriteLine("All blogs in the database:");
-                //foreach (var item in query)
+                commande2.Nom = "Commande 2 modifiée";
+
+                commande2 = CommandeDAO.updateObject(commande2);
+                Console.WriteLine(commande2);
+
+                //Console.WriteLine("getAllPiece");
+                //LigneCommande ligneCommande;
+                //foreach (Piece p in pieces)
                 //{
-                //    Console.WriteLine(item.Name);
+                //    Console.WriteLine("Pièce : " + p.Nom + " " + p.PrixUnitaire);
+                //    ligneCommande = new LigneCommande()
+                //    {
+                //        RefCommande = commande2.Id,
+                //        RefPiece = p.Id,
+                //        Quantite = 1000,
+                //        Unite = "Lot"
+                //    };
+                //    //db.LignesCommande.Add(ligneCommande);
+                //    //db.SaveChanges();
+                //    CommandeDAO.persistObject(ref ligneCommande);
+                //    Console.WriteLine("Ligne de la commande ajouté");
                 //}
 
-
             }
-            //LigneCommande ligneCommande1 = new LigneCommande()
-            //{
-            //};
-            //LigneCommande ligneCommande2 = new LigneCommande()
-            //{
-            //};
+
 
             Console.Read();
 

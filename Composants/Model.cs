@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 
 namespace Composants
 {
-    public class Piece : Model
+    public class Model
     {
-        [Required]
-        public string Nom { get; set; }
 
-        [Required]
-        public double PrixUnitaire { get; set; }
-
-
+        [Key]
+        public int Id { get; set; }
     }
 }
