@@ -11,12 +11,28 @@ namespace Methode
     public class CommandeDAO
     {
 
+        public static List<LigneCommande> getLignesCommandeByCommande(Commande c)
+        {
+
+            using (var db = new CommandeContext())
+            {
+                return db.LignesCommande
+                    .Where(lc => lc.Commande == c)
+                    .Include("Piece")
+                    .ToList();
+            }
+
+        }
+
         public static Commande getCommande(int id)
         {
 
             using (var db = new CommandeContext())
             {
-                return db.Commandes.Where(c => c.Id == id).Include("LignesCommande").SingleOrDefault();
+                return db.Commandes
+                    .Where(c => c.Id == id)
+                    .Include(c => c.LignesCommande.Select(lc => lc.Piece))
+                    .SingleOrDefault();
             }
 
         }
@@ -24,7 +40,9 @@ namespace Methode
         {
             using (var db = new CommandeContext())
             {
-                return db.Commandes.ToList();
+                return db.Commandes
+                    .Include(c => c.LignesCommande.Select(lc => lc.Piece))
+                    .ToList();
             }
         }
         public static List<Piece> getPieces()

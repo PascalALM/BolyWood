@@ -66,25 +66,13 @@
     <Compile Include="CommandeContext.cs" />
     <Compile Include="CommandeDAO.cs" />
     <Compile Include="CAD.cs" />
-    <Compile Include="Migrations\201803071001511_init.cs" />
-    <Compile Include="Migrations\201803071001511_init.Designer.cs">
-      <DependentUpon>201803071001511_init.cs</DependentUpon>
+    <Compile Include="Migrations\201803071324108_init.cs" />
+    <Compile Include="Migrations\201803071324108_init.Designer.cs">
+      <DependentUpon>201803071324108_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803071204040_list lignescommande.cs" />
-    <Compile Include="Migrations\201803071204040_list lignescommande.Designer.cs">
-      <DependentUpon>201803071204040_list lignescommande.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803071230159_lazyloading to false.cs" />
-    <Compile Include="Migrations\201803071230159_lazyloading to false.Designer.cs">
-      <DependentUpon>201803071230159_lazyloading to false.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803071239008_proxycreationenabled.cs" />
-    <Compile Include="Migrations\201803071239008_proxycreationenabled.Designer.cs">
-      <DependentUpon>201803071239008_proxycreationenabled.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803071248339_modif join commande.cs" />
-    <Compile Include="Migrations\201803071248339_modif join commande.Designer.cs">
-      <DependentUpon>201803071248339_modif join commande.cs</DependentUpon>
+    <Compile Include="Migrations\201803071328239_delete refpiece in lignecommande.cs" />
+    <Compile Include="Migrations\201803071328239_delete refpiece in lignecommande.Designer.cs">
+      <DependentUpon>201803071328239_delete refpiece in lignecommande.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,20 +93,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803071001511_init.resx">
-      <DependentUpon>201803071001511_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803071324108_init.resx">
+      <DependentUpon>201803071324108_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803071204040_list lignescommande.resx">
-      <DependentUpon>201803071204040_list lignescommande.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803071230159_lazyloading to false.resx">
-      <DependentUpon>201803071230159_lazyloading to false.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803071239008_proxycreationenabled.resx">
-      <DependentUpon>201803071239008_proxycreationenabled.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803071248339_modif join commande.resx">
-      <DependentUpon>201803071248339_modif join commande.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803071328239_delete refpiece in lignecommande.resx">
+      <DependentUpon>201803071328239_delete refpiece in lignecommande.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

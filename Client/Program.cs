@@ -13,7 +13,7 @@ namespace Client
         private static ServiceHost host;
         static void Main(string[] args)
         {
-            //initializeDb();
+            initializeDb();
 
             List<Piece> pieces = CommandeDAO.getPieces();
 
@@ -25,7 +25,7 @@ namespace Client
             foreach (LigneCommande l in commande1.LignesCommande)
             {
                 Console.WriteLine(l);
-                //Console.WriteLine(l.Piece);
+                Console.WriteLine(l.Piece.Nom);
             }
 
             Transfert Client = new Transfert();
@@ -37,7 +37,7 @@ namespace Client
             msg.OpStatut = false;
 
             msg.MsgInfo = "";
-            STC_MSG reponse = Client.getData(msg);
+            //STC_MSG reponse = Client.getData(msg);
 
             host = new ServiceHost(typeof(Transfert));
             //host.AddServiceEndpoint(typeof(iSvc), new BasicHttpBinding(), uri);
@@ -93,7 +93,7 @@ namespace Client
                     ligneCommande = new LigneCommande()
                     {
                         Commande = commande1,
-                        RefPiece = p.Id,
+                        Piece = p,
                         Quantite = 1000,
                         Unite = "Lot"
                     };
