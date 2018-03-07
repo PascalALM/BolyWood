@@ -10,7 +10,7 @@ using Contrat;
 namespace Methode
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
-    public class Transfert : Contrat.IDataContract
+    public class TransfertService : Contrat.IDataContract
     {
 
         private STC_MSG reponse;

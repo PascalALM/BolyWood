@@ -76,7 +76,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transfert.cs" />
+    <Compile Include="TransfertService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

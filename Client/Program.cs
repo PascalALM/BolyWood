@@ -4,21 +4,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Description;
 
 namespace Client
 {
     class Program
     {
-
-        private static ServiceHost host;
         static void Main(string[] args)
         {
-            initializeDb();
+            //initializeDb();
 
             List<Piece> pieces = CommandeDAO.getPieces();
 
             Console.WriteLine("get commande 1");
-            Commande commande1 = CommandeDAO.getCommande(1);
+            Commande commande1 = CommandeDAO.getCommande(10);
             Console.WriteLine(commande1);
 
             Console.WriteLine("test lignescommande");
@@ -28,7 +27,7 @@ namespace Client
                 Console.WriteLine(l.Piece.Nom);
             }
 
-            Transfert Client = new Transfert();
+            TransfertService Client = new TransfertService();
 
             STC_MSG msg = new STC_MSG();
             msg.AppName = "BolyWood Motherfucker";
@@ -38,14 +37,39 @@ namespace Client
 
             msg.MsgInfo = "";
             //STC_MSG reponse = Client.getData(msg);
+            Uri baseAddress = new Uri("http://localhost:8010/Server/Service");
+            using (ServiceHost host = new ServiceHost(typeof(TransfertService), baseAddress))
+            {
+                try
+                {
+                    // Enable metadata publishing.
+                    ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                    smb.HttpGetEnabled = true;
+                    //smb.MetadataExporter.PolicyVersion = PolicyVersion.Policy15;
+                    host.Description.Behaviors.Add(smb);
 
-            host = new ServiceHost(typeof(Transfert));
-            //host.AddServiceEndpoint(typeof(iSvc), new BasicHttpBinding(), uri);
-            host.Open();
-            Console.WriteLine("Srv Up");
-            //Console.Read();
+                    // Open the ServiceHost to start listening for messages. Since
+                    // no endpoints are explicitly configured, the runtime will create
+                    // one endpoint per base address for each service contract implemented
+                    // by the service.
+                    host.Open();
 
-            Console.Read();
+                    Console.WriteLine("The service is ready");
+                    //Console.WriteLine("Press <Enter> to stop the service.");
+                    //Console.Read();
+
+                    // Close the ServiceHost.
+                    //host.Close();
+                }
+                catch (CommunicationException ce)
+                {
+                    Console.WriteLine("An exception occurred: {0}", ce.Message);
+                    host.Abort();
+                }
+
+            }  
+
+    Console.Read();
 
 
         }
