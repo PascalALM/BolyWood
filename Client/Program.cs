@@ -2,9 +2,7 @@
 using Methode;
 using System;
 using System.Collections.Generic;
-using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace Client
 {
@@ -41,11 +39,20 @@ namespace Client
 
             using (var db = new CommandeContext())
             {
-                db.Pieces.Add(piece1);
-                db.Pieces.Add(piece2);
-                db.Commandes.Add(commande);
-                db.SaveChanges();
+                //db.Pieces.Add(piece1);
+                //db.Pieces.Add(piece2);
+                //db.Commandes.Add(commande);
+                //db.SaveChanges();
 
+                List<Commande> commandes = db.Commandes.ToList();
+                //var commandes = from b in db.Commandes
+                //            //where b.Name.StartsWith("B")
+                //            select b;
+                foreach (Commande c in commandes)
+                {
+                    Console.WriteLine(c);
+                }
+                //var query = (from r in db.Commandes select r);
                 // Display all Blogs from the database 
                 //var query = from b in db.Pieces
                 //            orderby b.Nom
