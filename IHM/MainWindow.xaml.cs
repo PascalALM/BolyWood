@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Composants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,5 +46,13 @@ namespace IHM
         {
 
         }
+        private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            Commande commande = (Commande)this.dtgBonDeCommande.SelectedItem;
+
+            MessageBox.Show("", "Woks");
+        }
+    
     }
 }

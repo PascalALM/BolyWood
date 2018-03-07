@@ -31,7 +31,14 @@
 
             <DataGrid ItemsSource="{Binding Commandes}" 
                       Margin="0,6,0,0"
-                      AutoGenerateColumns="False">
+                      AutoGenerateColumns="False"
+                      x:Name="dtgBonDeCommande"
+                      SelectedItem="{Binding Path=SelectedCommande, Mode=TwoWay}">
+                <DataGrid.ItemContainerStyle>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                    </Style>
+                </DataGrid.ItemContainerStyle>
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
