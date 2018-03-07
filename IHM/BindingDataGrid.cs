@@ -23,11 +23,12 @@ namespace IHM
         public BindingDataGrid()
         {
 
+
             
             List<string> _unites = new List<string> { "Piece", "Lot", "Gramme", "KiloGramme" };
 
-            var _customers = new List<LigneCommande>();
-            var _bondecommande = CommandeDAO.getCommandes();
+            List<LigneCommande> _customers = new List<LigneCommande>();
+            List<Commande> _bondecommande = CommandeDAO.getCommandes();
 
             LigneCommandes = CollectionViewSource.GetDefaultView(_customers);
             Unites = CollectionViewSource.GetDefaultView(_unites);

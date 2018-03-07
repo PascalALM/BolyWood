@@ -13,7 +13,7 @@ namespace Client
         private static ServiceHost host;
         static void Main(string[] args)
         {
-            //initializeDb();
+            initializeDb();
 
             List<Piece> pieces = CommandeDAO.getPieces();
 
