@@ -17,3 +17,7 @@ C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\EntityFramework.xml
 C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.init.resources
 C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.csproj.GenerateResource.Cache
+C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.listlignescommande.resources
+C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.lazyloadingtofalse.resources
+C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.proxycreationenabled.resources
+C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.modifjoincommande.resources

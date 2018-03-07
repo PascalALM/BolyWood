@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,9 @@ namespace Composants
         
         [Required]
         public string Nom { get; set; }
-        public virtual List<LigneCommande> LigneCommandes { get; set; }
+
+        //[InverseProperty("Commande")]
+        public virtual ICollection<LigneCommande> LignesCommande { get; set; }
 
         [Required]
         public DateTime DateCreation { get; set; }
