@@ -4,3 +4,5 @@
 
 /.vs/config
 /.vs/BolyWood/v15/Server/sqlite3
+/Methode/Migrations
+/Methode/obj/Debug
