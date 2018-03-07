@@ -12,10 +12,10 @@ namespace Methode.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Nom = c.String(),
+                        Nom = c.String(nullable: false),
                         DateCreation = c.DateTime(nullable: false),
-                        DateEdition = c.DateTime(nullable: false),
-                        DatePrevision = c.DateTime(nullable: false),
+                        DateEdition = c.DateTime(),
+                        DatePrevision = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -28,22 +28,20 @@ namespace Methode.Migrations
                         RefPiece = c.Int(nullable: false),
                         Quantite = c.Single(nullable: false),
                         Unite = c.String(),
-                        Commande_Id = c.Int(),
-                        Piece_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Commandes", t => t.Commande_Id)
-                .ForeignKey("dbo.Pieces", t => t.Piece_Id)
-                .Index(t => t.Commande_Id)
-                .Index(t => t.Piece_Id);
+                .ForeignKey("dbo.Commandes", t => t.RefCommande, cascadeDelete: true)
+                .ForeignKey("dbo.Pieces", t => t.RefPiece, cascadeDelete: true)
+                .Index(t => t.RefCommande)
+                .Index(t => t.RefPiece);
             
             CreateTable(
                 "dbo.Pieces",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Nom = c.String(),
-                        PrixUnitaire = c.Single(nullable: false),
+                        Nom = c.String(nullable: false),
+                        PrixUnitaire = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -51,10 +49,10 @@ namespace Methode.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.LigneCommandes", "Piece_Id", "dbo.Pieces");
-            DropForeignKey("dbo.LigneCommandes", "Commande_Id", "dbo.Commandes");
-            DropIndex("dbo.LigneCommandes", new[] { "Piece_Id" });
-            DropIndex("dbo.LigneCommandes", new[] { "Commande_Id" });
+            DropForeignKey("dbo.LigneCommandes", "RefPiece", "dbo.Pieces");
+            DropForeignKey("dbo.LigneCommandes", "RefCommande", "dbo.Commandes");
+            DropIndex("dbo.LigneCommandes", new[] { "RefPiece" });
+            DropIndex("dbo.LigneCommandes", new[] { "RefCommande" });
             DropTable("dbo.Pieces");
             DropTable("dbo.LigneCommandes");
             DropTable("dbo.Commandes");

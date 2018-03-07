@@ -33,7 +33,34 @@ namespace Methode
             {
                 return db.Pieces.ToList();
             }
+        }
 
+        public static T insertObject<T>(T obj) where T : Model
+        {
+            using(var db = new CommandeContext())
+            {
+                var table = db.Set(obj.GetType());
+                table.Add(obj);
+                db.SaveChanges();
+                return obj;
+            }
+        }
+        public static T updateObject<T>(T obj) where T : Model
+        {
+            using(var db = new CommandeContext())
+            {
+                var table = db.Set(obj.GetType());
+
+                var original = table.Find(obj.Id);
+
+                if (original != null)
+                {
+                    db.Entry(original).CurrentValues.SetValues(obj);
+                    db.SaveChanges();
+                }
+
+                return obj;
+            }
         }
     }
 }
