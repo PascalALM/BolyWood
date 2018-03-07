@@ -1,6 +1,7 @@
 ﻿using Composants;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace Methode
 
             using (var db = new CommandeContext())
             {
-                return db.Commandes.Where(c => c.Id == id).SingleOrDefault();
+                return db.Commandes.Where(c => c.Id == id).Include("LignesCommande").SingleOrDefault();
             }
 
         }
@@ -25,7 +26,6 @@ namespace Methode
             {
                 return db.Commandes.ToList();
             }
-
         }
         public static List<Piece> getPieces()
         {
@@ -57,9 +57,11 @@ namespace Methode
                 {
                     db.Entry(original).CurrentValues.SetValues(obj);
                     db.SaveChanges();
+
+                    return obj;
                 }
 
-                return obj;
+                return null;
             }
         }
     }
