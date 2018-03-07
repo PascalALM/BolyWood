@@ -11,8 +11,6 @@ namespace Composants
         public Commande Commande { get; set; }
 
         [Required]
-        [ForeignKey("Piece")]
-        public int RefPiece { get; set; }
         public Piece Piece { get; set; }
 
         [Required]
@@ -21,7 +19,7 @@ namespace Composants
 
         public override string ToString()
         {
-            return " Quantité : " + Quantite + " " + Unite;
+            return "Pièce : " + Piece.Nom + " | Quantité : " + Quantite + " " + Unite;
         }
 
     }

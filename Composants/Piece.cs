@@ -14,6 +14,7 @@ namespace Composants
 
         [Required]
         public double PrixUnitaire { get; set; }
+        public virtual ICollection<LigneCommande> LignesCommande { get; set; }
 
 
     }

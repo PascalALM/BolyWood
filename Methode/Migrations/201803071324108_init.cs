@@ -24,16 +24,16 @@ namespace Methode.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        RefCommande = c.Int(nullable: false),
                         RefPiece = c.Int(nullable: false),
                         Quantite = c.Single(nullable: false),
                         Unite = c.String(),
+                        Commande_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Commandes", t => t.RefCommande, cascadeDelete: true)
+                .ForeignKey("dbo.Commandes", t => t.Commande_Id, cascadeDelete: true)
                 .ForeignKey("dbo.Pieces", t => t.RefPiece, cascadeDelete: true)
-                .Index(t => t.RefCommande)
-                .Index(t => t.RefPiece);
+                .Index(t => t.RefPiece)
+                .Index(t => t.Commande_Id);
             
             CreateTable(
                 "dbo.Pieces",
@@ -50,9 +50,9 @@ namespace Methode.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.LigneCommandes", "RefPiece", "dbo.Pieces");
-            DropForeignKey("dbo.LigneCommandes", "RefCommande", "dbo.Commandes");
+            DropForeignKey("dbo.LigneCommandes", "Commande_Id", "dbo.Commandes");
+            DropIndex("dbo.LigneCommandes", new[] { "Commande_Id" });
             DropIndex("dbo.LigneCommandes", new[] { "RefPiece" });
-            DropIndex("dbo.LigneCommandes", new[] { "RefCommande" });
             DropTable("dbo.Pieces");
             DropTable("dbo.LigneCommandes");
             DropTable("dbo.Commandes");
