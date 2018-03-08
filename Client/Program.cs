@@ -1,10 +1,13 @@
 ﻿using Composants;
+using Contrat;
 using Methode;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Description;
+using System.ServiceModel.Web;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -36,27 +39,49 @@ namespace Client
             msg.OpName = "sendBC";
             msg.OpStatut = false;
 
-            msg.MsgInfo = "";
+            msg.MsgInfo = "test";
 
+            //msg.Data = new object[2];
 
-            using (ServiceHost host = new ServiceHost(typeof(TransfertService)))
+            string xml = Parser.ToXML(msg);
+            Console.WriteLine("xml parsé" + xml);
+            Console.WriteLine("json parsé" + JsonConvert.SerializeObject(msg));
+            using (WebServiceHost host = new WebServiceHost(
+                typeof(TransfertService), 
+                new Uri("http://localhost:8733/Bolywood/Service")
+            ))
             {
                 try
                 {
+                    ServiceEndpoint ep = host.AddServiceEndpoint(typeof(IDataContract), new WebHttpBinding(), "");
+                    host.Open();
 
                     Console.WriteLine("The service is ready");
 
-                    //Task.Run(() =>
+                    //using (ChannelFactory<IDataContract> cf = new ChannelFactory<IDataContract>(new WebHttpBinding(), "http://localhost:8733/Bolywood/Service"))
                     //{
-                    //    Thread.Sleep(5000);
+                    //    cf.Endpoint.Behaviors.Add(new WebHttpBehavior());
 
-                    //    TransfertService Client = new TransfertService();
+                    //    IDataContract channel = cf.CreateChannel();
 
-                    //    STC_MSG reponse = Client.getData(msg);
-                    //});
+                    //    Console.WriteLine("Calling GetMessage via HTTP POST: ");
+                    //    channel.GetMessage(xml);
 
-                    //Console.WriteLine("Press <Enter> to stop the service.");
-                    Console.Read();
+                    //}
+
+                        //Task.Run(() =>
+                        //{
+                        //    Thread.Sleep(5000);
+
+                        //    TransfertService Client = new TransfertService();
+
+                        //    string xml = Parser.ToXML(msg);
+                        //    Console.WriteLine(xml);
+                        //    STC_MSG reponse = Client.GetMessage(xml);
+                        //});
+
+                        //Console.WriteLine("Press <Enter> to stop the service.");
+                        Console.Read();
 
                     // Close the ServiceHost.
                     //host.Close();

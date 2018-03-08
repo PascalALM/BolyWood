@@ -69,3 +69,5 @@ C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Methode.pdb
 C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Methode.dll.config
 C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\ContratWCF.pdb
 C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\ContratWCF.dll.config
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\WPFTextBoxAutoComplete.pdb

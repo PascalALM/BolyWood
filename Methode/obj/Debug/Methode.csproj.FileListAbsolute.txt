@@ -15,9 +15,6 @@ C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\EntityFramework.dll
 C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\EntityFramework.xml
 C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.init.resources
-C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.csproj.GenerateResource.Cache
-C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.deleterefpieceinlignecommande.resources
 C:\Users\black\source\repos\BolyWood2\Methode\bin\Debug\Methode.dll.config
 C:\Users\black\source\repos\BolyWood2\Methode\bin\Debug\Methode.dll
 C:\Users\black\source\repos\BolyWood2\Methode\bin\Debug\Methode.pdb
@@ -39,3 +36,7 @@ C:\Users\black\source\repos\BolyWood2\Methode\obj\Debug\Methode.csproj.CoreCompi
 C:\Users\black\source\repos\BolyWood2\Methode\obj\Debug\Methode.dll
 C:\Users\black\source\repos\BolyWood2\Methode\obj\Debug\Methode.pdb
 C:\Users\black\Source\Repos\BolyWood2\Methode\obj\Debug\Methode.Migrations.gvfcdxs.resources
+C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.Migrations.init.resources
+C:\Users\Pascal\source\repos\BolyWood\Methode\obj\Debug\Methode.csproj.GenerateResource.Cache
+C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Pascal\source\repos\BolyWood\Methode\bin\Debug\Newtonsoft.Json.xml

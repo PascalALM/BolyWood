@@ -13,37 +13,51 @@ namespace Methode
     public class TransfertService : Contrat.IDataContract
     {
 
-        private STC_MSG reponse;
-        public STC_MSG getData(STC_MSG message)
-        {
-            EndpointAddress ep;
-            Contrat.IDataContract proxy;
-            string uri;
+        private string reponseStr;
 
-            Console.WriteLine("Transfert.getData() Succès");
+        public string insertDatePrev(string id_commande, string date)
+        {
+            Console.WriteLine("Transfert.insertDatePrev(" + id_commande + ", " + date + ")");
+            return date;
+        }
+
+        public STC_MSG GetMessage(string xml)
+        {
+            //EndpointAddress ep;
+            //Contrat.IDataContract proxy;
+            //string uri;
+
+            Console.WriteLine("Transfert.GetMessage()");
             //if (message.OpName == "sendBC")
             //{
             //    message = new Controller().getResult(message);
             //}
 
+            //string xml = Parser.ToXML(message);
 
 
-            uri = "http://localhost:8733/Bolywood/Mex";
-            ep = new EndpointAddress(uri);
 
-            proxy = ChannelFactory<Contrat.IDataContract>.CreateChannel(new BasicHttpBinding(), ep);
+            //uri = "http://localhost:8733/Bolywood/Mex";
+            //ep = new EndpointAddress(uri);
+
+            //proxy = ChannelFactory<Contrat.IDataContract>.CreateChannel(new BasicHttpBinding(), ep);
 
             //proxy.getData(message);
 
-            Console.WriteLine("Message reçu " + message);
+            Console.WriteLine("Message reçu " + xml);
 
-            reponse = proxy.getData(message);
+            //reponseStr = proxy.getData(xml);
 
-            Console.WriteLine("Message envoyé " + reponse);
+            //Console.WriteLine("Message envoyé " + reponseStr);
             //Console.WriteLine(reponse);
 
+            STC_MSG reponse = Parser.FromXml<STC_MSG>(xml);
+            Console.WriteLine("message traité " + reponse.AppName);
 
             return reponse;
+
+            //return new STC_MSG();
         }
+       
     }
 }

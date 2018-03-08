@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 using Composants;
 
@@ -13,9 +14,17 @@ namespace Contrat
     public interface IDataContract
     {
         [OperationContract]
-        STC_MSG getData(STC_MSG msg);
-        
+        [WebInvoke(UriTemplate = "/commande/", 
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json
+        )]
+        STC_MSG GetMessage(string msg);
+        [OperationContract]
+        [WebGet(UriTemplate = "/insertDatePrev/{id_commande}/{date}/",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json
+        )]
+        string insertDatePrev(string id_commande, string date);
 
-        // TODO: ajoutez vos opérations de service ici
     }
 }
