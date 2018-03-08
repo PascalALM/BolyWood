@@ -63,3 +63,9 @@ C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\Methode.pdb
 C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\Methode.dll.config
 C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\ContratWCF.pdb
 C:\Users\black\source\repos\BolyWood2\IHM\bin\Debug\ContratWCF.dll.config
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Methode.dll
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\ContratWCF.dll
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Methode.pdb
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\Methode.dll.config
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\ContratWCF.pdb
+C:\Users\Pascal\source\repos\BolyWood\IHM\bin\Debug\ContratWCF.dll.config

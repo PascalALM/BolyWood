@@ -28,16 +28,19 @@ namespace Methode
 
 
 
-            uri = "http://localhost:8010/Commande/Prevision";
+            uri = "http://localhost:8733/Bolywood/Mex";
             ep = new EndpointAddress(uri);
 
             proxy = ChannelFactory<Contrat.IDataContract>.CreateChannel(new BasicHttpBinding(), ep);
 
             //proxy.getData(message);
 
+            Console.WriteLine("Message reçu " + message);
+
             reponse = proxy.getData(message);
 
-            Console.WriteLine(reponse);
+            Console.WriteLine("Message envoyé " + reponse);
+            //Console.WriteLine(reponse);
 
 
             return reponse;
