@@ -18,6 +18,7 @@ namespace Composants
         {
             Nom = nom;
             DateCreation = DateTime.Now;
+            LignesCommande = new List<LigneCommande>();
         }
         
         [Required]

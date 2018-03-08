@@ -17,5 +17,21 @@ namespace Composants
         public virtual ICollection<LigneCommande> LignesCommande { get; set; }
 
 
+        public override string ToString()
+        {
+            return Nom;
+        }
+
+        public Piece(string Nom)
+        {
+            this.Nom = Nom;
+        }
+
+        public Piece()
+        {
+
+        }
+
+
     }
 }
