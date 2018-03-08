@@ -32,8 +32,14 @@ namespace IHM
             commandeEnCourDEdition = null;
 
         }
-        
 
+
+        private void btnActualiser_Click(object sender, RoutedEventArgs e) {
+
+            List<Commande> _bondecommande = CommandeDAO.getCommandes();
+            dtgBonDeCommande.ItemsSource = null;
+            dtgBonDeCommande.ItemsSource = _bondecommande;
+        }
         private void btnValider_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(this.tbNom.Text))
@@ -43,18 +49,37 @@ namespace IHM
                 this.tbNom.Focus();
             } else if (commandeEnCourDEdition != null)
             {
+                if (commandeEnCourDEdition.Id > 0)
+                {
+                    Commande commande = CommandeDAO.getCommande(commandeEnCourDEdition.Id);
+                    if (commande.Nom != this.tbNom.Text)
+                    {
+                        commande.Nom = this.tbNom.Text;
+                        commande.DateEdition = DateTime.Now;
+                        CommandeDAO.updateObject(commande);
+                    }
+                }
                 List<LigneCommande> listeDesLignes = (List<LigneCommande>)this.BonDeCommande.ItemsSource;
 
-                foreach (var ligne in listeDesLignes)
+                foreach (LigneCommande l in listeDesLignes)
                 {
-                    CommandeDAO.insertLigneCommande(ligne);
-                    //CommandeDAO.insertObject(ligne);
+                    //LigneCommande ligne = CommandeDAO.insertLigneCommande(l);
+                    //l.Id = ligne.Id;
+                    if(l.Id > 0)
+                    {
+                        CommandeDAO.updateObject(l);
+                    } else
+                    {
+                        CommandeDAO.insertLigneCommande(l);
+                    }
                 }
 
                 this.dtgBonDeCommande.ItemsSource = null;
                 this.dtgBonDeCommande.ItemsSource = CommandeDAO.getCommandes();
                 this.BonDeCommande.ItemsSource = null;
                 commandeEnCourDEdition = null;
+
+                this.tbNom.Text = "";
             }
             else
             {

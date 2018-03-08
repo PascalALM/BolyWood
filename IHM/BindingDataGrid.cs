@@ -42,9 +42,8 @@ namespace IHM
             Commandes = CollectionViewSource.GetDefaultView(_bondecommande);
             PiecesAutocomplete = CollectionViewSource.GetDefaultView(_listePieces);
 
-
-
         }
+        
          
     }
 }

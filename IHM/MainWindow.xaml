@@ -26,6 +26,33 @@
         </Grid.RowDefinitions>
 
         <Grid
+            Grid.Row="1"
+            Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button 
+                Grid.Row="2"
+                Grid.Column="2"
+                x:Name="btnActualiser" Click="btnActualiser_Click">
+                <Viewbox>
+                    <TextBlock>
+                        Actualiser
+                    </TextBlock>
+                </Viewbox>
+            </Button>
+
+        </Grid>
+
+        <Grid
             Grid.Row="2"
             Grid.Column="3" Grid.RowSpan="2">
 
