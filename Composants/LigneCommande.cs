@@ -13,13 +13,25 @@ namespace Composants
         [Required]
         public Piece Piece { get; set; }
 
-        [Required]
+        
         public float Quantite { get; set; }
         public string Unite { get; set; }
 
         public override string ToString()
         {
             return "Pièce : " + Piece.Nom + " | Quantité : " + Quantite + " " + Unite;
+        }
+
+        public LigneCommande(Piece piece, Commande commande, float quantite)
+        {
+            this.Commande = commande;
+            this.Piece = piece;
+            this.Quantite = quantite;
+        }
+
+        public LigneCommande()
+        {
+
         }
 
     }

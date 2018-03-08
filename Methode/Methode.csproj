@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201803071328239_delete refpiece in lignecommande.Designer.cs">
       <DependentUpon>201803071328239_delete refpiece in lignecommande.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803080824593_gvfcdxs.cs" />
+    <Compile Include="Migrations\201803080824593_gvfcdxs.Designer.cs">
+      <DependentUpon>201803080824593_gvfcdxs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransfertService.cs" />
@@ -98,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803071328239_delete refpiece in lignecommande.resx">
       <DependentUpon>201803071328239_delete refpiece in lignecommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080824593_gvfcdxs.resx">
+      <DependentUpon>201803080824593_gvfcdxs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
