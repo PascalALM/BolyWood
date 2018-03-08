@@ -29,41 +29,56 @@ namespace IHM
 
             DataContext = new BindingDataGrid();
             ComboBoxColumn.ItemsSource = new BindingDataGrid().Unites;
-            commandeEnCourDEdition = new Commande();
-            
+            commandeEnCourDEdition = null;
+
         }
         
 
         private void btnValider_Click(object sender, RoutedEventArgs e)
         {
-            if(this.tbNom.Text == "")
+            if (String.IsNullOrEmpty(this.tbNom.Text))
             {
-                MessageBox.Show("Veuillez données un nom a votre bon de commande", "Erreur");
-            }
-            else
+                MessageBoxResult result = MessageBox.Show("Merci de renseigner un nom avant de créer un bon de commande", "Erreur");
+
+                this.tbNom.Focus();
+            } else if (commandeEnCourDEdition != null)
             {
                 List<LigneCommande> listeDesLignes = (List<LigneCommande>)this.BonDeCommande.ItemsSource;
 
                 foreach (var ligne in listeDesLignes)
                 {
-                    CommandeDAO.insertObject(ligne);
+                    CommandeDAO.insertLigneCommande(ligne);
+                    //CommandeDAO.insertObject(ligne);
                 }
 
                 this.dtgBonDeCommande.ItemsSource = null;
                 this.dtgBonDeCommande.ItemsSource = CommandeDAO.getCommandes();
                 this.BonDeCommande.ItemsSource = null;
                 commandeEnCourDEdition = null;
-
-
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Aucune commande n'est sélectionnée", "Erreur");
             }
         }
 
         private void btnNewCommande_Click(object sender, RoutedEventArgs e)
         {
             this.BonDeCommande.ItemsSource = null;
-            commandeEnCourDEdition = null;
-            commandeEnCourDEdition = new Commande(this.tbNom.Text);
-            commandeEnCourDEdition = CommandeDAO.insertObject(commandeEnCourDEdition);
+            if(String.IsNullOrEmpty(this.tbNom.Text))
+            {
+                MessageBoxResult result = MessageBox.Show("Merci de renseigner un nom avant de créer un bon de commande", "Erreur");
+
+                this.tbNom.Focus();
+            } else
+            {
+                commandeEnCourDEdition = null;
+                commandeEnCourDEdition = new Commande(this.tbNom.Text);
+                commandeEnCourDEdition = CommandeDAO.insertObject(commandeEnCourDEdition);
+
+                MessageBoxResult result = MessageBox.Show("La commande a été créée", "Succès");
+
+            }
 
         }
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
@@ -90,25 +105,30 @@ namespace IHM
 
         private void btnAddRow_Click(object sender, RoutedEventArgs e)
         {
-            string namePiece = this.cbPiece.Text;
-            Piece newPiece = new Piece(namePiece);
-            List<LigneCommande> listeLigneCommande;
-
-            if (this.BonDeCommande.ItemsSource == null)
+            if(commandeEnCourDEdition != null)
             {
-                listeLigneCommande  = new List<LigneCommande>();
-            }
-            else
+                string namePiece = this.cbPiece.Text;
+                Piece piece = CommandeDAO.getPieceByName(namePiece);
+                List<LigneCommande> listeLigneCommande;
+
+                if (this.BonDeCommande.ItemsSource == null)
+                {
+                    listeLigneCommande = new List<LigneCommande>();
+                }
+                else
+                {
+                    listeLigneCommande = (List<LigneCommande>)this.BonDeCommande.ItemsSource;
+                }
+
+
+                listeLigneCommande.Add(new LigneCommande(piece, commandeEnCourDEdition, 0));
+
+                this.BonDeCommande.ItemsSource = null;
+                this.BonDeCommande.ItemsSource = listeLigneCommande;
+            } else
             {
-                 listeLigneCommande = (List<LigneCommande>)this.BonDeCommande.ItemsSource;
+                MessageBoxResult result = MessageBox.Show("Aucune commande n'est sélectionnée", "Erreur");
             }
-
-
-            listeLigneCommande.Add(new LigneCommande(newPiece, commandeEnCourDEdition, 0));
-
-            this.BonDeCommande.ItemsSource = null;
-            this.BonDeCommande.ItemsSource = listeLigneCommande;
-
         }
     }
 }

@@ -165,7 +165,8 @@
                                         />
                     <DataGridTextColumn Header="Quantite" Width="*" Binding="{Binding Quantite}"/>
                     <DataGridComboBoxColumn x:Name="ComboBoxColumn" Header="Unite" Width="*"
-                                            SelectedItemBinding="{Binding Unites}">
+                                            ItemsSource="{Binding Unites}"
+                                            SelectedItemBinding="{Binding Unite}">
                         
                         
                     </DataGridComboBoxColumn>

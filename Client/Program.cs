@@ -33,19 +33,19 @@ namespace Client
             //}
 
 
-            STC_MSG msg = new STC_MSG();
-            msg.AppName = "BolyWood Motherfucker";
-            msg.AppVrs = "1000.0";
-            msg.OpName = "sendBC";
-            msg.OpStatut = false;
+            //STC_MSG msg = new STC_MSG();
+            //msg.AppName = "BolyWood Motherfucker";
+            //msg.AppVrs = "1000.0";
+            //msg.OpName = "sendBC";
+            //msg.OpStatut = false;
 
-            msg.MsgInfo = "test";
+            //msg.MsgInfo = "test";
 
             //msg.Data = new object[2];
 
-            string xml = Parser.ToXML(msg);
-            Console.WriteLine("xml parsé" + xml);
-            Console.WriteLine("json parsé" + JsonConvert.SerializeObject(msg));
+            //string xml = Parser.ToXML(msg);
+            //Console.WriteLine("xml parsé" + xml);
+            //Console.WriteLine("json parsé" + JsonConvert.SerializeObject(msg));
             using (WebServiceHost host = new WebServiceHost(
                 typeof(TransfertService), 
                 new Uri("http://localhost:8733/Bolywood/Service")

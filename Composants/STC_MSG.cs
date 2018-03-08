@@ -8,40 +8,15 @@ namespace Composants
     [DataContract]
     public struct STC_MSG
     {
-        //
         [DataMember]
-        public string AppName;
-        [DataMember]
-        public string AppVrs;
-
-        //
-        [DataMember]
-        public string OpName;
-        [DataMember]
-        public bool OpStatut;
-        [DataMember]
-        public string MsgInfo;
-
+        public int Id { get; set; }
 
         [DataMember]
-        public object[] Data;
+        public string Nom { get; set; }
 
-
-        //[DataMember]
-        //public int BC_Id { get; set; }
-
-        //[DataMember]
-        //public string BC_Nom { get; set; }
-
-        //[DataMember]
-        //public List<Piece> BC_pieces { get; set; }
-
-        //[DataMember]
-        //public DateTime BC_Date_crea { get; set; }
-
-        //[DataMember]
-        //public DateTime BC_Date_prev { get; set; }
-
-
+        [DataMember]
+        public string DateCreation { get; set; }
+        [DataMember]
+        public string DateEdition { get; set; }
     }
 }

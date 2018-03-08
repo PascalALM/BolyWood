@@ -69,7 +69,6 @@
   <ItemGroup>
     <Compile Include="CommandeContext.cs" />
     <Compile Include="CommandeDAO.cs" />
-    <Compile Include="CAD.cs" />
     <Compile Include="Migrations\201803080917408_init.cs" />
     <Compile Include="Migrations\201803080917408_init.Designer.cs">
       <DependentUpon>201803080917408_init.cs</DependentUpon>

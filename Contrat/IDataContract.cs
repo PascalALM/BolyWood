@@ -13,18 +13,19 @@ namespace Contrat
     [ServiceContract(Namespace = "http://Bolywood")]
     public interface IDataContract
     {
-        [OperationContract]
-        [WebInvoke(UriTemplate = "/commande/", 
-            RequestFormat = WebMessageFormat.Json,
-            ResponseFormat = WebMessageFormat.Json
-        )]
-        STC_MSG GetMessage(string msg);
+        //[OperationContract]
+        //[WebInvoke(UriTemplate = "/commande/", 
+        //    RequestFormat = WebMessageFormat.Xml,
+        //    ResponseFormat = WebMessageFormat.Xml
+        //)]
+        //STC_MSG GetMessage(string msg);
+
         [OperationContract]
         [WebGet(UriTemplate = "/insertDatePrev/{id_commande}/{date}/",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json
         )]
-        string insertDatePrev(string id_commande, string date);
+        void insertDatePrev(string id_commande, string date);
 
     }
 }
